@@ -1,0 +1,20 @@
+.d-flex {
+  display: flex;
+}
+
+.format-img {
+  width: 50%;
+  height: 300px;
+  object-fit: cover;
+  padding: 10px;
+}
+
+.img-container {
+  max-width: 1000px;
+  margin:auto;
+}
+
+.search-container {
+  width: 1000px;
+  margin: 10px 5px 0px 5px;
+}
