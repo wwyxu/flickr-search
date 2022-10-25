@@ -4,8 +4,8 @@ import Search from "./search";
 import API from "src/services/api";
 
 const FlickrPictures = () => {
-  const [searchWord, setSearchWord] = useState("");
-  const [pictures, setPictures] = useState([]);
+  const [searchWord, setSearchWord] = useState<string>("");
+  const [pictures, setPictures] = useState<string[]>([]);
 
   useEffect(() => {
     getPictures();
@@ -13,7 +13,7 @@ const FlickrPictures = () => {
 
   const getPictures = async () => {
     try {
-      const getPics = await API.getPictures(searchWord)
+      const getPics: string[] = await API.getPictures(searchWord)
 
       setPictures(getPics);
     } catch (error) {

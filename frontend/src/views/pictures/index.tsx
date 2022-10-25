@@ -1,13 +1,17 @@
 import React from "react";
 
-const Pictures = ({pictures}) => {
+interface Pictures {
+    pictures: string[];
+}
+
+const Pictures = ({ pictures }: Pictures) => {
     return (
         <>
             {pictures.map((picture, index) => (
                 <img
                     className="format-img"
                     src={picture}
-                    alt="picture"
+                    alt={`img number` + index}
                 />
             ))}
         </>

@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 import { getFlickrImageURL } from "../utils/string";
 
 const getPictures = async function (tag?: string) {
-    const yourApiKey = 'd467d470521c058fa4f9d1d3efc3b525'; // Better to use process.env
+    const yourApiKey = 'd467d470521c058fa4f9d1d3efc3b525'; // Better to use environment variables
 
     const data = {
         method: 'flickr.photos.search',

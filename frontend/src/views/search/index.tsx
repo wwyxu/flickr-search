@@ -1,6 +1,12 @@
 import React from "react";
 
-const Search = ({search, searchWord, setSearchWord}) => {
+interface Search {
+  search: any;
+  searchWord: string;
+  setSearchWord: Function;
+}
+
+const Search = ({search, searchWord, setSearchWord}: Search) => {
   const onSubmit = (e) => {
     e.preventDefault(); 
     search();
