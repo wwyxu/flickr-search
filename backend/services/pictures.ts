@@ -7,7 +7,7 @@ const getPictures = async function (tag?: string) {
     const data = {
         method: 'flickr.photos.search',
         api_key: yourApiKey,
-        text: tag || "", 
+        tags: tag || "", 
         sort: 'interestingness-desc',
         per_page: '12',
         license: '4',
