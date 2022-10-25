@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Pictures from "./pictures";
 import Search from "./search";
+import { FLICKR_SEARCH } from "src/constants";
 import API from "src/services/api";
 
 const FlickrPictures = () => {
@@ -22,10 +23,15 @@ const FlickrPictures = () => {
   }
 
   return (
-    <div className="img-container">
-      <Search search={getPictures} searchWord={searchWord} setSearchWord={setSearchWord} />
-      <Pictures pictures={pictures} />
-    </div>
+    <>
+      <h1 className="text-center mb-0 mt-2">{FLICKR_SEARCH}</h1>
+      <div className="img-container">
+        <Search search={getPictures} searchWord={searchWord} setSearchWord={setSearchWord} />
+        <main>
+          <Pictures pictures={pictures} />
+        </main>
+      </div>
+    </>
   )
 };
 

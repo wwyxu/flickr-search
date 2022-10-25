@@ -1,10 +1,10 @@
 import React from "react";
 
-interface Pictures {
+interface PicturesTypes {
     pictures: string[];
 }
 
-const Pictures = ({ pictures }: Pictures) => {
+const Pictures = ({ pictures }: PicturesTypes) => {
     return (
         <>
             {pictures.map((picture, index) => (

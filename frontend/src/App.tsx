@@ -5,17 +5,17 @@ import FlickRSearch from "./views";
 
 const App = () => {
   return (
-      <BrowserRouter>
-        <main>
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={(props) => <FlickRSearch {...props} />}
-              />
-            </Switch>
-        </main>
-      </BrowserRouter>
+    <BrowserRouter>
+      <body>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={(props) => <FlickRSearch {...props} />}
+            />
+          </Switch>
+      </body>
+    </BrowserRouter>
   );
 }
 
