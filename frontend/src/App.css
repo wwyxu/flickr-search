@@ -11,10 +11,10 @@
 
 .img-container {
   max-width: 1000px;
-  margin:auto;
+  margin: auto;
 }
 
 .search-container {
-  width: 1000px;
+  width: 100%;
   margin: 10px 5px 0px 5px;
 }

@@ -1,22 +1,20 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
-import Register from "./views";
+import FlickRSearch from "./views";
 
 const App = () => {
   return (
       <BrowserRouter>
-        <div className="container-fluid">
-          <div className="row no-gutters">
+        <main>
             <Switch>
               <Route
                 exact
                 path="/"
-                render={(props) => <Register {...props} />}
+                render={(props) => <FlickRSearch {...props} />}
               />
             </Switch>
-          </div>
-        </div>
+        </main>
       </BrowserRouter>
   );
 }
