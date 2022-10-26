@@ -1,12 +1,11 @@
 import fetch from "node-fetch";
 import { getFlickrImageURL } from "../utils/string";
+import { ApiKey } from "../keys";
 
 const getPictures = async function (tag?: string) {
-    const yourApiKey = 'd467d470521c058fa4f9d1d3efc3b525'; // Better to use environment variables
-
     const data = {
         method: 'flickr.photos.search',
-        api_key: yourApiKey,
+        api_key: ApiKey,
         tags: tag || "", 
         sort: 'interestingness-desc',
         per_page: '12',
@@ -22,8 +21,7 @@ const getPictures = async function (tag?: string) {
 
     const picData = await fetch(
         url,
-        {
-            method: "GET",
+        { method: "GET",
         }
     ).then(res => res.json()).then(data => (
         data.photos.photo.map((photo) => {

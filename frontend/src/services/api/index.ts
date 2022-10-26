@@ -1,5 +1,5 @@
 const API = {
-    getPictures: (tag?: string) => {
+    getPictures: (tags?: string, page?: number) => {
         return fetch(
             "http://localhost:5001/pictures/getPictures",
             {
@@ -8,7 +8,7 @@ const API = {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ tag }),
+                body: JSON.stringify({ tags, page }),
             }
         ).then((response) => {
             return response.json();

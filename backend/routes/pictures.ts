@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.post("/getPictures", async (req, res) => {
   try {
-    const pics = await pictureServices.getPictures(req.body.tag);
+    const pics = await pictureServices.getPictures(req.body.tags);
 
     return res.json(pics);
   } catch (err) {
