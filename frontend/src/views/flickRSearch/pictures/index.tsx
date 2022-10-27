@@ -11,7 +11,8 @@ const Pictures = ({ pictures }: PicturesTypes) => {
                 <img
                     className="format-img"
                     src={picture}
-                    alt={`img number` + index}
+                    key={`img:` + index}
+                    alt={`img number:` + index}
                 />
             ))}
         </>

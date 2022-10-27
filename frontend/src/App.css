@@ -1,9 +1,38 @@
 /* Global */
+
+body {
+  overflow: auto;
+}
+
 .d-flex {
   display: flex;
 }
 
+/* Register */
+
+.authenticate-card {
+  max-width: 500px;
+  margin: auto;
+}
+
+.reg-container {
+  padding-top: 120px;
+  align-content: center;
+}
+
+.reg-card {
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 450px;
+}
+
 /* Pictures */
+
+.logout-btn {
+  position: absolute;
+  right: 0px;
+  margin: 5px 5px 0px;
+}
 
 .search-container {
   width: 100%;

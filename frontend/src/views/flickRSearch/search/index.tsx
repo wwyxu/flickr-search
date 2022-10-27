@@ -15,7 +15,7 @@ const Search = ({search, searchWord, setSearchWord}: Search) => {
 
   return (
     <form className="search-container d-flex" onSubmit={onSubmit}>
-      <input type="text" className="form-control" placeholder={SEARCH} value={searchWord} onChange={(e) => {setSearchWord(e.target.value)}} required />
+      <input type="text" className="form-control" placeholder={SEARCH} value={searchWord} onChange={(e) => {setSearchWord(e.target.value)}} />
       <button type="button" className="btn btn-primary ml-2" onClick={search}>{SEARCH}</button>
     </form>
   )

@@ -6,7 +6,7 @@ const getPictures = async function (tag?: string) {
     const data = {
         method: 'flickr.photos.search',
         api_key: ApiKey,
-        tags: tag || "", 
+        tags: tag || "",
         sort: 'interestingness-desc',
         per_page: '12',
         license: '4',
@@ -21,7 +21,8 @@ const getPictures = async function (tag?: string) {
 
     const picData = await fetch(
         url,
-        { method: "GET",
+        {
+            method: "GET",
         }
     ).then(res => res.json()).then(data => (
         data.photos.photo.map((photo) => {

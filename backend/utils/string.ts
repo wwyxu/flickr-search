@@ -9,4 +9,8 @@ const getFlickrImageURL = (photo, size?) => {
     return url;
 };
 
-export { getFlickrImageURL };
+const validEmail = (userEmail) => {
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userEmail);
+  }
+
+export { getFlickrImageURL, validEmail };
